@@ -6,45 +6,151 @@ Native Apple Silicon CUPS raster filters for printers that have no official macO
 PDF → cgpdftoraster (macOS built-in) → rastertoXXX (our filter) → printer
 ```
 
+> **Testing status:** Only the HP LaserJet P1007 has been verified on real hardware. The other 88 printers compile and should work — the filters are faithful rewrites of the battle-tested [foo2zjs](http://foo2zjs.rkkda.com/) project — but none have been tested yet. If you have one of these printers, [we'd love your help](#help-us-test).
+
 ## Supported Printers
 
 9 format families covering 89 printer models.
 
 ### XQX — `rastertoxqx`
 
-HP LaserJet P1005, P1006, P1007, P1008
+| Printer | Status |
+|---------|--------|
+| HP LaserJet P1005 | Untested |
+| HP LaserJet P1006 | Untested |
+| HP LaserJet P1007 | **Verified** |
+| HP LaserJet P1008 | Untested |
 
 ### ZjStream — `rastertozjs`
 
-HP LaserJet 1000, 1005, 1018, 1020, 1022, 1022n, 1022nw, M1005 MFP, M1120 MFP, M1319 MFP, P2014, P2014n, P2035, P2035n, Pro M1212nf MFP, Pro P1102, Pro P1102w, Pro P1566, Pro P1606dn · Minolta 2200 DL, 2300 DL, 2430 DL
+| Printer | Status |
+|---------|--------|
+| HP LaserJet 1000 | Untested |
+| HP LaserJet 1005 | Untested |
+| HP LaserJet 1018 | Untested |
+| HP LaserJet 1020 | Untested |
+| HP LaserJet 1022 | Untested |
+| HP LaserJet 1022n | Untested |
+| HP LaserJet 1022nw | Untested |
+| HP LaserJet M1005 MFP | Untested |
+| HP LaserJet M1120 MFP | Untested |
+| HP LaserJet M1319 MFP | Untested |
+| HP LaserJet P2014 | Untested |
+| HP LaserJet P2014n | Untested |
+| HP LaserJet P2035 | Untested |
+| HP LaserJet P2035n | Untested |
+| HP LaserJet Pro M1212nf MFP | Untested |
+| HP LaserJet Pro P1102 | Untested |
+| HP LaserJet Pro P1102w | Untested |
+| HP LaserJet Pro P1566 | Untested |
+| HP LaserJet Pro P1606dn | Untested |
+| Minolta magicolor 2200 DL | Untested |
+| Minolta magicolor 2300 DL | Untested |
+| Minolta magicolor 2430 DL | Untested |
 
 ### ZJS (HP 2600n) — `rastertohp`
 
-HP Color LaserJet 1600, 2600n, CP1215
+| Printer | Status |
+|---------|--------|
+| HP Color LaserJet 1600 | Untested |
+| HP Color LaserJet 2600n | Untested |
+| HP Color LaserJet CP1215 | Untested |
 
 ### HiPerC — `rastertohiperc`
 
-Oki C110, C301dn, C310dn, C3100, C3200, C3300, C3400, C3530 MFP, C5100, C511dn, C5200, C5500, C5600, C5650, C5800, C810
+| Printer | Status |
+|---------|--------|
+| Oki C110 | Untested |
+| Oki C301dn | Untested |
+| Oki C310dn | Untested |
+| Oki C3100 | Untested |
+| Oki C3200 | Untested |
+| Oki C3300 | Untested |
+| Oki C3400 | Untested |
+| Oki C3530 MFP | Untested |
+| Oki C5100 | Untested |
+| Oki C511dn | Untested |
+| Oki C5200 | Untested |
+| Oki C5500 | Untested |
+| Oki C5600 | Untested |
+| Oki C5650 | Untested |
+| Oki C5800 | Untested |
+| Oki C810 | Untested |
 
 ### QPDL — `rastertoqpdl`
 
-Samsung CLP-300, CLP-310, CLP-315, CLP-325, CLP-365, CLP-600, CLP-610, CLP-620, CLX-2160, CLX-3160, CLX-3175, CLX-3185 · Xerox Phaser 6110
+| Printer | Status |
+|---------|--------|
+| Samsung CLP-300 | Untested |
+| Samsung CLP-310 | Untested |
+| Samsung CLP-315 | Untested |
+| Samsung CLP-325 | Untested |
+| Samsung CLP-365 | Untested |
+| Samsung CLP-600 | Untested |
+| Samsung CLP-610 | Untested |
+| Samsung CLP-620 | Untested |
+| Samsung CLX-2160 | Untested |
+| Samsung CLX-3160 | Untested |
+| Samsung CLX-3175 | Untested |
+| Samsung CLX-3185 | Untested |
+| Xerox Phaser 6110 | Untested |
 
 ### LAVAFLOW — `rastertolava`
 
-Konica Minolta magicolor 1600W, 1680MF, 1690MF, 2430 DL, 2480 MF, 2490 MF, 2530 DL, 4690MF · Minolta Color PageWorks Pro L · Olivetti d-Color P160W · Xerox Phaser 6115MFP, 6121MFP · Oki C110
+| Printer | Status |
+|---------|--------|
+| Konica Minolta magicolor 1600W | Untested |
+| Konica Minolta magicolor 1680MF | Untested |
+| Konica Minolta magicolor 1690MF | Untested |
+| Konica Minolta magicolor 2430 DL | Untested |
+| Konica Minolta magicolor 2480 MF | Untested |
+| Konica Minolta magicolor 2490 MF | Untested |
+| Konica Minolta magicolor 2530 DL | Untested |
+| Konica Minolta magicolor 4690MF | Untested |
+| Minolta Color PageWorks Pro L | Untested |
+| Olivetti d-Color P160W | Untested |
+| Xerox Phaser 6115MFP | Untested |
+| Xerox Phaser 6121MFP | Untested |
+| Oki C110 | Untested |
 
 ### HBPL2 — `rastertohbpl2`
 
-Dell 1355, C1765 · Epson AcuLaser M1400, CX17NF · Fuji Xerox DocuPrint CM205, CM215, M215, P205 · Xerox WorkCentre 3045, 6015
+| Printer | Status |
+|---------|--------|
+| Dell 1355 | Untested |
+| Dell C1765 | Untested |
+| Epson AcuLaser M1400 | Untested |
+| Epson AcuLaser CX17NF | Untested |
+| Fuji Xerox DocuPrint CM205 | Untested |
+| Fuji Xerox DocuPrint CM215 | Untested |
+| Fuji Xerox DocuPrint M215 | Untested |
+| Fuji Xerox DocuPrint P205 | Untested |
+| Xerox WorkCentre 3045 | Untested |
+| Xerox WorkCentre 6015 | Untested |
 
 ### OAKT — `rastertooak`
 
-HP Color LaserJet 1500 · Kyocera KM-1635, KM-2035
+| Printer | Status |
+|---------|--------|
+| HP Color LaserJet 1500 | Untested |
+| Kyocera KM-1635 | Untested |
+| Kyocera KM-2035 | Untested |
 
 ### SLX — `rastertoslx`
 
-Lexmark C500
+| Printer | Status |
+|---------|--------|
+| Lexmark C500 | Untested |
+
+## Help Us Test
+
+If you have any of the printers listed above, you can help by testing the driver and reporting results:
+
+1. Install the driver: `sudo ./install.sh`
+2. Connect your printer and try printing the test page
+3. [Open a Printer Test Report](../../issues/new?template=printer-test-report.yml) with your results — working, partial, or broken
+
+Even a "it prints but the margins are off" report is valuable. Every confirmed printer gets marked as verified in the table above.
 
 ## Installation
 
@@ -115,6 +221,10 @@ lp -oraw /usr/local/share/foo2zjs/firmware/sihpP1005.dl
 | `PPD/` | Printer description files (89 files) |
 | `install.sh` | Automated installer |
 | `Makefile` | Build system |
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to test, report, and submit changes.
 
 ## License
 
