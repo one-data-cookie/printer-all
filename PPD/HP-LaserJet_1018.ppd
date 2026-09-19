@@ -33,7 +33,7 @@
 *cupsVersion:	1.0
 *cupsManualCopies: True
 *cupsModelNumber:  2
-*cupsFilter:	"application/vnd.cups-postscript 0 foomatic-rip"
+*cupsFilter:	"application/vnd.cups-raster 0 rastertozjs-1018fw"
 *%pprRIP:        foomatic-rip other
 *ModelName:     "HP LaserJet 1018"
 *ShortNickName: "HP LaserJet 1018 foo2zjs-z1"
@@ -95,17 +95,17 @@
 *OpenUI *Resolution/Resolution: PickOne
 *FoomaticRIPOption Resolution: enum CmdLine A
 *OrderDependency: 130 AnySetup *Resolution
-*DefaultResolution: 1200x600dpi
-*Resolution 600x600dpi/600x600 dpi: "%% FoomaticRIPOptionSetting: Resolution=600x600dpi"
+*DefaultResolution: 600x600dpi
+*Resolution 600x600dpi/600x600 dpi: "<</HWResolution[600 600]>>setpagedevice"
 *FoomaticRIPOptionSetting Resolution=600x600dpi: "-r600x600 "
-*Resolution 1200x600dpi/1200x600 dpi: "%% FoomaticRIPOptionSetting: Resolution=1200x600dpi"
+*Resolution 1200x600dpi/1200x600 dpi: "<</HWResolution[1200 600]>>setpagedevice"
 *FoomaticRIPOptionSetting Resolution=1200x600dpi: "-r1200x600 "
 *CloseUI: *Resolution
 
 *OpenUI *PageSize/Page Size: PickOne
 *FoomaticRIPOption PageSize: enum CmdLine A
 *OrderDependency: 135 AnySetup *PageSize
-*DefaultPageSize: Letter
+*DefaultPageSize: A4
 *PageSize Letter/Letter: "%% FoomaticRIPOptionSetting: PageSize=Letter"
 *FoomaticRIPOptionSetting PageSize=Letter: "-p1 "
 *PageSize A4/A4: "%% FoomaticRIPOptionSetting: PageSize=A4"
@@ -144,7 +144,7 @@
 
 *OpenUI *PageRegion: PickOne
 *OrderDependency: 135 AnySetup *PageRegion
-*DefaultPageRegion: Letter
+*DefaultPageRegion: A4
 *PageRegion Letter/Letter: "%% FoomaticRIPOptionSetting: PageSize=Letter"
 *PageRegion A4/A4: "%% FoomaticRIPOptionSetting: PageSize=A4"
 *PageRegion A5/A5: "%% FoomaticRIPOptionSetting: PageSize=A5"
@@ -164,7 +164,7 @@
 *PageRegion w558h774/16k 197x273 mm: "%% FoomaticRIPOptionSetting: PageSize=w558h774"
 *CloseUI: *PageRegion
 
-*DefaultImageableArea: Letter
+*DefaultImageableArea: A4
 *ImageableArea Letter/Letter: "11.34 11.34 600.66 780.66"
 *ImageableArea A4/A4: "11.34 11.34 583.66 830.66"
 *ImageableArea A5/A5: "11.34 11.34 408.66 583.66"
@@ -183,7 +183,7 @@
 *ImageableArea Postcard/Postcard: "11.34 11.34 271.66 404.66"
 *ImageableArea w558h774/16k 197x273 mm: "11.34 11.34 546.66 762.66"
 
-*DefaultPaperDimension: Letter
+*DefaultPaperDimension: A4
 *PaperDimension Letter/Letter: "612 792"
 *PaperDimension A4/A4: "595 842"
 *PaperDimension A5/A5: "420 595"
