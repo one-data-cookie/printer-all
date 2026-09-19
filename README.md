@@ -1,3 +1,28 @@
+# printer-all (fork with HP LaserJet 1018 fix)
+
+This is a fork of [faradayfury/printer-all](https://github.com/faradayfury/printer-all) with fixes for the **HP LaserJet 1018** on macOS:
+
+- The 1018 driver file (PPD) now uses the native `rastertozjs` filter instead of the old `foomatic-rip`, prints at 600 dpi instead of 100 dpi, and defaults to A4.
+- The firmware is sent automatically with every print job, so there's no manual firmware step after switching the printer on.
+
+## Setup (HP LaserJet 1018)
+
+Switch the printer on and connect it by USB, then run:
+
+```bash
+xcode-select --install   # skip if already installed
+git clone https://github.com/one-data-cookie/printer-all.git
+cd printer-all
+sudo ./install.sh
+./setup-1018.sh
+```
+
+After that: switch the printer on and print. The first print after power-on takes a few extra seconds while the firmware loads.
+
+---
+
+*Original README below.*
+
 # printer-all — ARM64 macOS CUPS Drivers for 89 Printers
 
 Native Apple Silicon CUPS raster filters for printers that have no official macOS ARM64 driver. No Ghostscript, no Rosetta — uses macOS's built-in `cgpdftoraster`.
