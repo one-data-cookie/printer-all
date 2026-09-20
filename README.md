@@ -10,7 +10,6 @@ This is a fork of [faradayfury/printer-all](https://github.com/faradayfury/print
 Switch the printer on and connect it by USB, then run:
 
 ```bash
-xcode-select --install   # skip if already installed
 git clone https://github.com/one-data-cookie/printer-all.git
 cd printer-all
 sudo ./install.sh
