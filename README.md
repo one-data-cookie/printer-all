@@ -17,7 +17,7 @@ sudo ./install.sh
 ./setup-1018.sh
 ```
 
-After that: switch the printer on and print. The first print after power-on takes a few extra seconds while the firmware loads.
+That's it, just print. The firmware is sent with every job, so each print takes a few extra seconds to start.
 
 ---
 
